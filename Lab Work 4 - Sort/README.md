@@ -357,30 +357,3 @@ void radixSort(int arr[], int n)
     for (int exp = 1; maxValue / exp > 0; exp *= 10)
         countingSortByDigit(arr, n, exp);
 }
-```
-ВСПОМОГАТЕЛЬНЫЙ ВЫВОД
-```cpp
-template<typename T>
-void printArray(const T arr[], int n)
-{
-    for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-}
-```
-DEMO MAIN
-```cpp
-int main()
-{
-    // статичесикий массив
-    const int n = 10;
-    int base[n] = { 5, 2, 9, 1, 5, 6, 3, 7, 8, 4 }; // неотрицательные для radix
-    printArray(base, n);
-
-    // динамический массив
-    vector<int>a = { 1, 3, 4, 5, 6 };
-	printArray(a.data(), static_cast<int>(a.size()));
-
-    return 0;
-}
-```
